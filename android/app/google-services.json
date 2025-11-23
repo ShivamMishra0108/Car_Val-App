@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "557739804427",
+    "project_id": "carval-373ea",
+    "storage_bucket": "carval-373ea.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557739804427:android:585bb0f5c56507dc86440e",
+        "android_client_info": {
+          "package_name": "com.example.car_val"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwaUKL1zY0IHV3NXkFSx2Z9CmWc2mfl4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
