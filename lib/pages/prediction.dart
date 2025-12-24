@@ -11,12 +11,13 @@ class PredictionPage extends StatefulWidget {
 
 class _HomeScreenState extends State<PredictionPage> {
   double? price;
-  late int year;
+  final TextEditingController yearController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController companyController = TextEditingController();
+  late final int  year;
   late final int kms_driven;
   final TextEditingController fuelController = TextEditingController();
-  final TextEditingController engineController = TextEditingController();
+
   final PredictionController _predictionController = PredictionController();
   double? _predictedPrice;
 
@@ -44,7 +45,7 @@ class _HomeScreenState extends State<PredictionPage> {
 
   @override
   void dispose() {
-    engineController.dispose();
+    nameController.dispose();
     super.dispose();
   }
 
@@ -65,6 +66,8 @@ class _HomeScreenState extends State<PredictionPage> {
               ),
               keyboardType: TextInputType.number,
             ),
+            const SizedBox(height: 12),
+
             TextField(
               controller: companyController,
               decoration: const InputDecoration(
@@ -73,11 +76,10 @@ class _HomeScreenState extends State<PredictionPage> {
               ),
               keyboardType: TextInputType.number,
             ),
-            TextField(
-              onSubmitted: (v) {
-                year = int.parse(v);
-              },
+            const SizedBox(height: 12),
 
+            TextField(
+               onSubmitted: (value) => {kms_driven = int.parse(value)},
               decoration: const InputDecoration(
                 labelText: "Year",
                 border: OutlineInputBorder(),
@@ -92,6 +94,8 @@ class _HomeScreenState extends State<PredictionPage> {
                 border: OutlineInputBorder(),
               ),
             ),
+            const SizedBox(height: 12),
+            
             TextField(
               controller: fuelController,
               decoration: const InputDecoration(

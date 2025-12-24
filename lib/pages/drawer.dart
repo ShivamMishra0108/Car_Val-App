@@ -20,7 +20,7 @@ class MyDrawer extends StatelessWidget {
               // logo
               DrawerHeader(
                 child: Center(
-                  child: Image.asset('assets/images/swiftcar.webp'),
+                  child: Image.asset('image/carvalo_logo.png'),
                 ),
               ),
 

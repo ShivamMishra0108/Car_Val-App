@@ -6,9 +6,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePage extends StatelessWidget {
   final List<String> bannerImages = [
-    'assets/images/altocar.webp',
-    'assets/images/swiftcar.webp',
-    'assets/images/scorpio.webp',
+    'image/altocar.webp',
+    'image/swiftcar.webp',
+    'image/scorpio.webp',
   ];
 
   @override
@@ -97,10 +97,10 @@ class HomePage extends StatelessWidget {
 
             MyButton(
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => PredictionPage()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PredictionPage()),
+                );
               },
               text: 'Get Started',
             ),

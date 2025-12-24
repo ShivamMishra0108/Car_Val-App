@@ -4,13 +4,13 @@ import 'package:http/http.dart' as http;
 class PredictionController {
    Future<double> predictFraud(Map<String,dynamic> transaction)async{
     try{
-      http.Response response = await http.post(
+      http.Response response = await http.get(
           Uri.parse('$modelUri/predict'),
-        body: jsonEncode(transaction),
         headers: <String,String>{
             'Content-Type':'application/json; charset=UTF-8'
         }
       );
+
       if(response.statusCode == 200){
         final data = jsonDecode(response.body);
         return data['prediction'];
